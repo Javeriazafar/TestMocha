@@ -1,0 +1,59 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [
+        {
+            "files": ["./test/mocha.test.js","apigee.js"],
+            "rules": {
+              "no-use-before-define": ["off"],
+              "max-len": ["off"]
+            }
+          }
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "plugins": [
+        "regex"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "camelcase":[
+            "error", 
+            {"allow":["^[a-z]+(?:[A-Z][a-z]+)*$"]}
+            
+        ], 
+        "max-len":[
+            1,
+            {"code":100}
+        ],
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "TryStatement > BlockStatement",
+                "message": "There should be a 'try block' in the code as a good coding practice"
+            }
+            ],
+        
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}
+
+

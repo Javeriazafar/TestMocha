@@ -1,0 +1,31 @@
+{
+  "name": "eslintapigee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint ./apigee.js",
+    "start": "(npm run eslint) || mocha ./test/mocha-eslint.js --reporter mochawesome --parallel",
+    "test": "mocha --reporter mocha-xunit-reporter --reporter dot",
+    "coverage": "nyc --reporter html --reporter cobertura --reporter text npm test",
+    "ist": "istanbul cover --report cobertura _mocha ./test/mocha-eslint.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.37.0",
+    "eslint-plugin-regex": "^1.10.0",
+    "git": "^0.1.5",
+    "istanbul": "^0.4.5",
+    "mocha": "^10.2.0",
+    "mocha-xunit-reporter": "^2.3.0",
+    "mochawesome": "^7.1.3",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mochawesome-report-generator": "^6.2.0",
+    "npm-git-install": "^0.3.0",
+    "sinon": "^15.0.4"
+  }
+}
